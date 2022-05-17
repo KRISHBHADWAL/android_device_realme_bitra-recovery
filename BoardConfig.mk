@@ -167,31 +167,38 @@ TW_INCLUDE_REPACKTOOLS := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
-#shrp Mandatory Flags
-SHRP_DEVICE_CODE := bitra
-SHRP_PATH := device/bitra/$(SHRP_DEVICE_CODE)
-SHRP_MAINTAINER := SonicKrish
-SHRP_DEVICE_TYPE := A_ONLY
-SHRP_REC := /dev/block/bootdevice/by-name/recovery
-SHRP_REC_TYPE := Treble
+# #shrp Mandatory Flags
+# SHRP_DEVICE_CODE := bitra
+# SHRP_PATH := device/bitra/$(SHRP_DEVICE_CODE)
+# SHRP_MAINTAINER := SonicKrish
+# SHRP_DEVICE_TYPE := A_ONLY
+# SHRP_REC := /dev/block/bootdevice/by-name/recovery
+# SHRP_REC_TYPE := Treble
 
-#IMPORTANT FLAGS # These are usually good to check 
-SHRP_EDL_MODE := 1
-SHRP_INTERNAL := /sdcard
-SHRP_EXTERNAL := /
-SHRP_OTG := /usb_otg
-SHRP_FLASH := 1
+# #IMPORTANT FLAGS # These are usually good to check 
+# SHRP_EDL_MODE := 1
+# SHRP_INTERNAL := /sdcard
+# SHRP_EXTERNAL := /
+# SHRP_OTG := /usb_otg
+# SHRP_FLASH := 1
 
-# OPTIONAL FLAGS # Stuff which highly depends on  bitra
-SHRP_STATUSBAR_RIGHT_PADDING := 01px-03px
-SHRP_STATUSBAR_LEFT_PADDING :=  01px-03px
-SHRP_EXPRESS := true
-SHRP_EXPRESS_USE_DATA := true
-SHRP_DARK := true
+# # OPTIONAL FLAGS # Stuff which highly depends on  bitra
+# SHRP_STATUSBAR_RIGHT_PADDING := 01px-03px
+# SHRP_STATUSBAR_LEFT_PADDING :=  01px-03px
+# SHRP_EXPRESS := true
+# SHRP_EXPRESS_USE_DATA := true
+# SHRP_DARK := true
 
-#SHRP ADDITIONAL ADDONS
-SHRP_SKIP_DEFAULT_ADDON_1 := true
-SHRP_SKIP_DEFAULT_ADDON_2 := true
-INC_IN_REC_ADDON_3 := true
-INC_IN_REC_ADDON_4 := true
-INC_IN_REC_MAGISK := true
+# #SHRP ADDITIONAL ADDONS
+# SHRP_SKIP_DEFAULT_ADDON_1 := true
+# SHRP_SKIP_DEFAULT_ADDON_2 := true
+# INC_IN_REC_ADDON_3 := true
+# INC_IN_REC_ADDON_4 := true
+# INC_IN_REC_MAGISK := true
+# PBRP specific build flags
+PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
+
+# PB Torch
+PB_TORCH_PATH := "/proc/qcom_flash"
+PB_TORCH_MAX_BRIGHTNESS := 1
