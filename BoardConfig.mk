@@ -166,3 +166,11 @@ TW_INCLUDE_REPACKTOOLS := true
 # Debug-tools
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+#shrp Mandatory Flags
+SHRP_DEVICE_CODE := bitra
+SHRP_PATH := device/bitra/$(SHRP_DEVICE_CODE)
+SHRP_MAINTAINER := SonicKrish
+SHRP_DEVICE_TYPE := A_ONLY
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+
