@@ -182,3 +182,10 @@ SHRP_EXTERNAL := /
 SHRP_OTG := /usb_otg
 SHRP_FLASH := 1
 
+# OPTIONAL FLAGS # Stuff which highly depends on  bitra
+SHRP_STATUSBAR_RIGHT_PADDING := 01px-03px
+SHRP_STATUSBAR_LEFT_PADDING :=  01px-03px
+SHRP_EXPRESS := true
+SHRP_EXPRESS_USE_DATA := true
+SHRP_DARK := true
+
