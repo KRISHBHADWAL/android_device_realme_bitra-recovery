@@ -173,4 +173,12 @@ SHRP_PATH := device/bitra/$(SHRP_DEVICE_CODE)
 SHRP_MAINTAINER := SonicKrish
 SHRP_DEVICE_TYPE := A_ONLY
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
+SHRP_REC_TYPE := Treble
+
+#IMPORTANT FLAGS # These are usually good to check 
+SHRP_EDL_MODE := 1
+SHRP_INTERNAL := /sdcard
+SHRP_EXTERNAL := /
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 1
 
