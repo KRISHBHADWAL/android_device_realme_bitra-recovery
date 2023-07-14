@@ -56,21 +56,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export OF_MAINTAINER="SonicKish⚡"
     export FOX_DELETE_AROMAFM=1
     export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
-    #export FOX_USE_SPECIFIC_MAGISK_ZIP=~/fox_11.0/device/realme/bitra/Magisk/Magisk-24.3.apk
+    export FOX_USE_SPECIFIC_MAGISK_ZIP="/fox_12.1/device/realme/bitra/Magisk/Magisk-v26.1.zip"
     #export OF_KEEP_DM_VERITY=1
     #export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
     #export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
     export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
-# Magisk
-	if [ -n "${FOX_USE_SPECIFIC_MAGISK_ZIP}" ]; then
-		if [ ! -e "${FOX_USE_SPECIFIC_MAGISK_ZIP}" ]; then
-			echo "Downloading the Latest Release of Magisk..."
-			LATEST_MAGISK_URL="$(curl -sL https://api.github.com/repos/topjohnwu/Magisk/releases/latest | grep browser_download_url | grep Magisk- | cut -d : -f 2,3 | sed 's/"//g')"
-			aria2c ${LATEST_MAGISK_URL} -o ${FOX_USE_SPECIFIC_MAGISK_ZIP} || wget ${LATEST_MAGISK_URL} -O ${FOX_USE_SPECIFIC_MAGISK_ZIP}
-			[ $? = "0" ] && echo "Magisk Downloaded Successfully"
-			echo "Done!"
-		fi
-	fi
 
 	# Screen Settings
 	export OF_SCREEN_H=2400
