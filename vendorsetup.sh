@@ -62,6 +62,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     #export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
     export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 
+	#Target Device Alts
+	
+	TARGET_DEVICE_ALT="bitra,RE879AL1,RMX3370"
+
 	# Screen Settings
 	export OF_SCREEN_H=2400
 	export OF_STATUS_H=100
